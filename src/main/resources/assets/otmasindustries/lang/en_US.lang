@@ -1,0 +1,11 @@
+item.otmasindustries_CustomItem.name=Otmas' Experiment 1
+entity.CustomMob.name=Otmas' Minion
+entity.OtmasMob.name=Otmas
+tile.otmasindustries_CustomBlock.name=Custom Block
+tile.otmasindustries_OtmasBlock.name=OtmasBlock
+tile.otmasindustries_OtmasBlock.name=Shrine Of Otmas
+item.otmasindustries_ShrineOfOtmas.name=Scepter Of Otmas
+tile.otmasindustries_OtmasiniumOre.name=Otmasinium Ore
+item.otmasindutries_OtmasiniumIngot.name=Otmasinium Ingot
+item.examplemod_CustomSword.name=Otmasinium Sword
+itemGroup.Otmas Industries Mod=Otmas Industries Mod

@@ -1,0 +1,16 @@
+[
+{
+  "modid": "otmasindustries",
+  "name": "Otmas Industries Mod",
+  "description": "Awesome explosions and more in this fun packed mod!",
+  "version": "1.0",
+  "mcversion": "1.8",
+  "url": "otmasindustries.tk",
+  "updateUrl": "",
+  "authorList": ["Otmas"],
+  "credits": Otmas",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
