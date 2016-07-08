@@ -43,7 +43,7 @@ import net.minecraftforge.fml.relauncher.Side;
 @Mod (modid = ExampleMod.MODID, version = ExampleMod.VERSION)
 public class ExampleMod {
     public static final String MODID = "otmasindustries";
-    public static final String VERSION = "0.96b";
+    public static final String VERSION = "0.96c";
     private static int lastBiomeID = 0;
     public static BiomeGenBase customBiome;
     public static ToolMaterial customToolMaterial;
