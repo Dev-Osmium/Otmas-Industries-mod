@@ -27,7 +27,7 @@ public class CustomItem extends Item {
 	public boolean onItemUse(ItemStack stack, EntityPlayer playerIn,
 			World worldIn, BlockPos pos, EnumFacing side, float hitX,
 			float hitY, float hitZ) {
-		 worldIn.createExplosion(playerIn, pos.getX() + hitX, pos.getY() + hitY, pos.getZ() + hitZ, 100.0f, true);
+		 worldIn.createExplosion(playerIn, pos.getX() + hitX, pos.getY() + hitY, pos.getZ() + hitZ, 10.0f, true);
 		// TODO Auto-generated method stub
 		return super.onItemUse(stack, playerIn, worldIn, pos, side, hitX, hitY, hitZ);
 	}

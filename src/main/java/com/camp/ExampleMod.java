@@ -33,20 +33,25 @@ import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 
+import javax.swing.*;
+
 
 @Mod (modid = ExampleMod.MODID, version = ExampleMod.VERSION)
 public class ExampleMod {
     public static final String MODID = "otmasindustries";
-    public static final String VERSION = "0.96c";
+    public static final String VERSION = "0.0.96c";
     private static int lastBiomeID = 0;
     public static BiomeGenBase customBiome;
     public static ToolMaterial customToolMaterial;
+
+	public static String DEVMODE = "true";
 
     public static CreativeTabs otmasTab = new CreativeTabs("Otmas Industries Mod") {
 
@@ -63,7 +68,7 @@ public class ExampleMod {
 
         ItemManager.mainRegistry();
         BlockManager.mainRegistry();
-        System.out.println("loading mobs...");
+        System.out.println("Loading mobs...");
 
         createEntity(CustomMob.class, "CustomMob", 0x00FF00, 0xFF0000);
         createEntity(OtmasMob.class, "OtmasMob", 0x0000FF, 0xFF0000);
@@ -74,7 +79,8 @@ public class ExampleMod {
     @EventHandler
     public void init (FMLInitializationEvent event) {
         // some example code
-        System.out.println("Otmas Industries mod version" + VERSION + " loaded");
+
+
         // render entity
         RenderingRegistry.registerEntityRenderingHandler(CustomMob.class, new RenderCustomBiped(new ModelBiped(), 0.5f));
         RenderingRegistry.registerEntityRenderingHandler(OtmasMob.class, new RenderOtmasBiped(new ModelBiped(), 0.5f));
@@ -161,5 +167,15 @@ public class ExampleMod {
         // didn't find an empty spot
         return -1;
     }
+	@EventHandler
+	public void postInit (FMLPostInitializationEvent event) {
+		System.out.println("Otmas Industries mod version " + VERSION + " loaded");
+		switch (DEVMODE){
+			case "true":
+				System.err.println("Error: Developer Mode Engaged.");
+			default:
+				break;
+		}
+	}
 
 }
